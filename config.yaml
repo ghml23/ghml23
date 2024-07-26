@@ -1,0 +1,136 @@
+gh-token: 'TODO' # add GH token
+disk-path: '/home/manuel/d3tect-gh/' # add data storage path
+# Search repositories by language
+# query – string (https://docs.github.com/en/rest/search - max 1000 results)
+# https://docs.github.com/en/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax
+# https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories
+# fork:true vs fork:only
+# sort – string (‘stars’, ‘forks’, ‘updated’)
+# qualifiers – keyword dict query qualifiers
+queries: ### add siem security moninitoring without "in"
+  - query-string: 'monitoring security in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'detection stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'ips stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'ids stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'wids stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'monitoring security in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'detection in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'hunting in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'nsm in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'siem in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'forensics in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'alerting in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'threat intel in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'threat intelligence in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'threatintel in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'threat-hunting in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'incident-response in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'security incidents  in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'digital forensics in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'incident-response in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'yara in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'osquery in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'security operations in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  - query-string: 'antivirus in:readme,name,description,topics stars:>1 forks:>0 followers:>1 fork:true'
+    search-type: 'updated'
+    from: '2000-01-01'
+    to: '2024-01-01'
+    active: True
+  
+#  - query-string: 'monitoring security ModSecurity pushed:>2022-01-01 stars:>2 forks:>0 followers:>5 fork:true'
+#    search-type: 'updated'
+#    from: '2000-01-01'
+#    to: '2024-01-01'
+#    active: True
